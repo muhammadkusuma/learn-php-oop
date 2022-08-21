@@ -1,6 +1,8 @@
 <?php
 
 class Person{
+    const AUTHOR="M. Wira Ade Kusuma";
+
     var string $name;
     var ?string $address=null;
     var string $country="Indonesia";
