@@ -4,10 +4,12 @@ class Manager{
     var string $name;
 
     function sayHello(string $name):void{
-        echo "Hi $name, my name is $this->name".PHP_EOL;
+        echo "Hi $name, my name is MAnager $this->name".PHP_EOL;
     }
 }
 
 class VicePresident extends Manager{
-
+    function sayHello(string $name):void{
+        echo "Hi $name, my name is VP $this->name".PHP_EOL;
+    }
 }
