@@ -10,7 +10,7 @@ var_dump($company);
 $company->programmer=new FrontendProgrammer("Wira");
 var_dump($company);
 
-sayHello(new Programmer("Wira"));
-sayHello(new BackendProgrammer("Wira"));
-sayHello(new FrontendProgrammer("Wira"));
+sayHelloProgammer(new Programmer("Wira"));
+sayHelloProgammer(new BackendProgrammer("Wira"));
+sayHelloProgammer(new FrontendProgrammer("Wira"));
 
