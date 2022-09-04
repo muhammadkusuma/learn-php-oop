@@ -25,6 +25,31 @@ trait HasName{
     public string $name;
 }
 
-class Person{
-    use sayGoodBye,sayHello, HasName;
+trait CanRun{
+    public abstract function run():void;
+}
+
+class ParentPerson{
+    public function goodBye(?string $name): void
+    {
+        echo "Good by in person".PHP_EOL;
+    }
+
+    public function hello(?string $name): void
+    {
+        echo "Hello in person".PHP_EOL;
+    }
+}
+class Person extends ParentPerson {
+    use sayGoodBye,sayHello, HasName,CanRun{
+//        bisa di override
+//        hello as private;
+//        goodBye as private;
+    }
+
+    public function run():void{
+        echo "Person $this->name is running".PHP_EOL;
+    }
+
+
 }
