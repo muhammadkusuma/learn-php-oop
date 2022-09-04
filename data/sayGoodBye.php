@@ -40,12 +40,15 @@ class ParentPerson{
         echo "Hello in person".PHP_EOL;
     }
 }
-class Person extends ParentPerson {
+trait All{
     use sayGoodBye,sayHello, HasName,CanRun{
 //        bisa di override
 //        hello as private;
 //        goodBye as private;
     }
+}
+class Person extends ParentPerson {
+    use All;
 
     public function run():void{
         echo "Person $this->name is running".PHP_EOL;
